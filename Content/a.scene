@@ -1,0 +1,134 @@
+{
+	"ID": "6768dd934ddca30fc945ea9e49f8f664",
+	"TypeName": "FlaxEngine.SceneAsset",
+	"EngineBuild": 6334,
+	"Data": [
+		{
+			"ID": "6768dd934ddca30fc945ea9e49f8f664",
+			"TypeName": "FlaxEngine.Scene",
+			"LightmapSettings": {
+				"IndirectLightingIntensity": 1.0,
+				"GlobalObjectsScale": 1.0,
+				"ChartsPadding": 3,
+				"AtlasSize": 1024,
+				"BounceCount": 1,
+				"CompressLightmaps": true,
+				"UseGeometryWithNoMaterials": true,
+				"Quality": 10
+			}
+		},
+		{
+			"ID": "0b8045a04ccbb7a84d088d94de119bca",
+			"TypeName": "FlaxEngine.DirectionalLight",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "Sun",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 160.0,
+					"Z": 0.0
+				},
+				"Orientation": {
+					"X": 0.3826834559440613,
+					"Y": 0.0,
+					"Z": 0.0,
+					"W": 0.9238795042037964
+				}
+			}
+		},
+		{
+			"ID": "cc0a1f3c40f4414ed58789b0badfed60",
+			"TypeName": "FlaxEngine.Sky",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "Sky",
+			"Transform": {
+				"Translation": {
+					"X": 40.0,
+					"Y": 150.0,
+					"Z": 0.0
+				}
+			},
+			"Sun": "0b8045a04ccbb7a84d088d94de119bca"
+		},
+		{
+			"ID": "a214992d4a151b4ec4416aa773531ffb",
+			"TypeName": "FlaxEngine.SkyLight",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "SkyLight",
+			"Brightness": 2.5,
+			"CustomTexture": "c54410104ff39427bc11e5bc761d66b0"
+		},
+		{
+			"ID": "2ddb6f7f4de32029a52e74956d5fbe10",
+			"TypeName": "FlaxEngine.StaticModel",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "Floor",
+			"Transform": {
+				"Scale": {
+					"X": 4.0,
+					"Y": 0.5,
+					"Z": 4.0
+				}
+			},
+			"Model": "b43f0f8f4aaba3f3156896a5a22ba493",
+			"Buffer": {
+				"Entries": [
+					{
+						"Material": "1771b53343d461faacdf2c8581b1fdbb",
+						"ShadowsMode": 3,
+						"Visible": true,
+						"ReceiveDecals": true
+					}
+				]
+			}
+		},
+		{
+			"ID": "42f74483408d13126e331ebca61c9257",
+			"TypeName": "FlaxEngine.Camera",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "Camera",
+			"Transform": {
+				"Translation": {
+					"X": 0.0,
+					"Y": 135.0,
+					"Z": -299.0
+				}
+			}
+		},
+		{
+			"ID": "e9f327414daed06ac7c7bda64f160c69",
+			"TypeName": "Game.Scout.Gameplay.Camera.CameraRotation",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"PCamera": "3048e5f24aacefcc7bec0289b3ca13ac",
+	"PLimit": 80.0
+}
+		},
+		{
+			"ID": "0e49d68c48ba7d71df90e68d4b8d76ba",
+			"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraZoom",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"POffset": "daaf03094c48304695d7cca93c361798",
+	"PStep": 0.1,
+	"PMinOffset": 100.0,
+	"PMaxOffset": 1000.0
+}
+		},
+		{
+			"ID": "3048e5f24aacefcc7bec0289b3ca13ac",
+			"TypeName": "Game.Scout.Gameplay.Camera.Orbit.OrbitCamera",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {}
+		},
+		{
+			"ID": "daaf03094c48304695d7cca93c361798",
+			"TypeName": "Game.Scout.Gameplay.Camera.Orbit.AnimatedOrbitCameraOffset",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"POrbitCamera": "3048e5f24aacefcc7bec0289b3ca13ac",
+	"PTime": 200.0
+}
+		}
+	]
+}
