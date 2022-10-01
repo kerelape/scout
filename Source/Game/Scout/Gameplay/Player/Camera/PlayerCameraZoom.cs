@@ -51,7 +51,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 		/// </summary>
 		public void ZoomIn()
 		{
-			this.Zoom(this._zoom + this.PStep);
+			this.Update(this._zoom + this.PStep);
 		}
 
 		/// <summary>
@@ -59,16 +59,16 @@ namespace Game.Scout.Gameplay.Player.Camera
 		/// </summary>
 		public void ZoomOut()
 		{
-			this.Zoom(this._zoom - this.PStep);
+			this.Update(this._zoom - this.PStep);
 		}
 
 		/// <summary>
 		/// Zoom the camera to the desired level.
 		/// </summary>
-		/// <param name="level">Desired zoom level (0-1).</param>
-		public void Zoom(Single level)
+		/// <param name="value">Desired zoom level (0-1).</param>
+		public void Update(Single value)
 		{
-			this._zoom = Mathf.Clamp(level, 0f, 1f);
+			this._zoom = Mathf.Clamp(value, 0f, 1f);
 		}
 
 		/// <summary>
@@ -87,7 +87,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 		/// <inheritdoc />
 		public override void OnStart()
 		{
-			this.Zoom(0.5f);
+			this.Update(0.5f);
 		}
 
 		/// <inheritdoc />
