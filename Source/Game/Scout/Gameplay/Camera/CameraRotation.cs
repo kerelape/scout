@@ -8,12 +8,12 @@ namespace Game.Scout.Gameplay.Camera
 	/// </summary>
 	public sealed class CameraRotation : Rotation
 	{
-		[ShowInEditor, Serialize]
+		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Camera")]
 		[Tooltip("The camera to rotate.")]
 		private ControlledCamera PCamera { get; set; }
 
-		[ShowInEditor, Serialize]
+		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Limit")]
 		[Tooltip("Vertical rotation limit in degrees.")]
 		private Single PLimit { get; set; }

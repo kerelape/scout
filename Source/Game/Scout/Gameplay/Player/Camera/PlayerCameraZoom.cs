@@ -1,6 +1,6 @@
 using System;
 using FlaxEngine;
-using Game.Scout.Gameplay.Camera.Orbit;
+using Game.Scout.Gameplay.Camera;
 
 namespace Game.Scout.Gameplay.Player.Camera
 {

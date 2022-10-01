@@ -8,7 +8,7 @@ using Real = System.Double;
 using Real = System.Single;
 #endif
 
-namespace Game.Scout.Gameplay.Camera.Orbit
+namespace Game.Scout.Gameplay.Camera
 {
     /// <summary>
     /// Base component to implement OrbitCamera. It doesn't do anything by itself,
@@ -18,7 +18,7 @@ namespace Game.Scout.Gameplay.Camera.Orbit
     /// </summary>
     public sealed class OrbitCamera : ControlledCamera
     {
-        [ShowInEditor, Serialize]
+        [Serialize] [ShowInEditor]
         [Tooltip("Physical size of the camera.")]
         private Single Radius { get; set; } = 32;
 
