@@ -28,11 +28,10 @@ namespace Game.Scout.Gameplay.Player.Camera
 		[Tooltip("Minimum offset from the player in centimeters.")]
 		private Single PMinOffset { get; set; }
 
-		/// <summary>
-		///	Maximum offset from the target in player.
-		/// </summary>
-		[Serialize]
-		private Single _maxOffset;
+		[Serialize] [ShowInEditor]
+		[EditorDisplay(name: "Maximum Offset")]
+		[Tooltip("Maximum offset from the player in centimeters.")]
+		private Single PMaxOffset { get; set; }
 
 		/// <summary>
 		/// Destination zoom level.
@@ -71,22 +70,13 @@ namespace Game.Scout.Gameplay.Player.Camera
 			this._zoom = Mathf.Clamp(value, 0f, 1f);
 		}
 
-		/// <summary>
-		/// Update maximum offset from the player.
-		/// </summary>
-		/// <param name="value">New offset in centimeters.</param>
-		public void UpdateMaximumOffset(Single value)
-		{
-			if (value <= this.PMinOffset)
-			{
-				throw new ArgumentOutOfRangeException("Maximum offset cannot be less than the minimum.");
-			}
-			this._maxOffset = value;
-		}
-
 		/// <inheritdoc />
 		public override void OnStart()
 		{
+			if (this.PMinOffset >= this.PMaxOffset)
+			{
+				throw new ArgumentException("Maximum offset must be more than the minimum.");
+			}
 			this.Update(0.5f);
 		}
 
@@ -94,7 +84,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 		public override void OnUpdate()
 		{
 			var time = (1 / (this.PTime / 1000f)) * Time.UnscaledDeltaTime;
-			var destination = Mathf.Lerp(this._maxOffset, this.PMinOffset, this._zoom);
+			var destination = Mathf.Lerp(this.PMaxOffset, this.PMinOffset, this._zoom);
 			this._current = Mathf.Lerp(this._current, destination, Mathf.Clamp(time, 0f, 1f));
 			this.POrbitCamera.UpdateOffset(this._current);
 		}

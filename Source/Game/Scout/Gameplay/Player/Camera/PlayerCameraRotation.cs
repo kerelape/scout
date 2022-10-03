@@ -1,17 +1,18 @@
 using System;
 using FlaxEngine;
+using Game.Scout.Gameplay.Camera;
 
-namespace Game.Scout.Gameplay.Camera
+namespace Game.Scout.Gameplay.Player.Camera
 {
 	/// <summary>
 	/// Camera rotation component.
 	/// </summary>
-	public sealed class CameraRotation : Rotation
+	public sealed class PlayerCameraRotation : Script
 	{
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Camera")]
 		[Tooltip("The camera to rotate.")]
-		private ControlledCamera PCamera { get; set; }
+		private OrbitCamera PCamera { get; set; }
 
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Limit")]
@@ -31,14 +32,14 @@ namespace Game.Scout.Gameplay.Camera
 		private Single _theta;
 
 		/// <inheritdoc />
-		public override void RotateHorizontally(Single delta)
+		public void RotateHorizontally(Single delta)
 		{
 			this._phi += delta;
 			this.PCamera.UpdatePhi(this._phi);
 		}
 
 		/// <inheritdoc />
-		public override void RotateVertically(Single delta)
+		public void RotateVertically(Single delta)
 		{
 			this._theta = Mathf.Clamp(this._theta + delta, -this.PLimit, this.PLimit);
 			this.PCamera.UpdateTheta(this._theta);
@@ -47,7 +48,9 @@ namespace Game.Scout.Gameplay.Camera
 		/// <inheritdoc />
 		public override void OnStart()
 		{
-			this.Rotate(this._phi, this._theta);
+			// Restore rotation on load
+			this.RotateHorizontally(this._phi);
+			this.RotateVertically(this._theta);
 		}
 	}
 }

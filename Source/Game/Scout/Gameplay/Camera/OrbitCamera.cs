@@ -16,7 +16,7 @@ namespace Game.Scout.Gameplay.Camera
     ///
     /// Only works in world space.
     /// </summary>
-    public sealed class OrbitCamera : ControlledCamera
+    public sealed class OrbitCamera : Script
     {
         [Serialize] [ShowInEditor]
         [Tooltip("Physical size of the camera.")]
@@ -61,7 +61,7 @@ namespace Game.Scout.Gameplay.Camera
         /// Update horizontal rotation (yaw) of the camera.
         /// </summary>
         /// <param name="value">New rotation value in degrees.</param>
-        public override void UpdatePhi(Single value)
+        public void UpdatePhi(Single value)
         {
             this._phi = value;
         }
@@ -70,7 +70,7 @@ namespace Game.Scout.Gameplay.Camera
         /// Update vertical rotation (pitch) of the camera.
         /// </summary>
         /// <param name="value">New rotation value in degrees</param>
-        public override void UpdateTheta(Single value)
+        public void UpdateTheta(Single value)
         {
             this._theta = value;
         }
