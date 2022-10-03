@@ -45,7 +45,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 		{
 			var time = (1 / (this.PTime / 1000f)) * Time.UnscaledDeltaTime;
 			this._current = Mathf.Lerp(this._current, this._destination, Mathf.Clamp(time, 0f, 1f));
-			this.POrbitCamera.UpdateOffset(this._current);
+			this.POrbitCamera.UpdateSlide(this._current);
 		}
 	}
 }
