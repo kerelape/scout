@@ -23,7 +23,7 @@ namespace Game.Scout.Gameplay.Player.Input
 			var delta = FlaxEngine.Input.MousePositionDelta;
 			if (delta.Length > 0f)
 			{
-				this.Look?.Invoke(delta * new Float2(this.PSensitivity, this.PSensitivity / 2f));
+				this.Look?.Invoke(delta * this.PSensitivity);
 			}
 		}
 	}

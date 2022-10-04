@@ -41,6 +41,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 		/// <inheritdoc />
 		public void RotateVertically(Single delta)
 		{
+			delta *= (this.PLimit * 2f) / 360f;
 			this._theta = Mathf.Clamp(this._theta + delta, -this.PLimit, this.PLimit);
 			this.PCamera.UpdateTheta(this._theta);
 		}
@@ -49,8 +50,8 @@ namespace Game.Scout.Gameplay.Player.Camera
 		public override void OnStart()
 		{
 			// Restore rotation on load
-			this.RotateHorizontally(this._phi);
-			this.RotateVertically(this._theta);
+			this.PCamera.UpdatePhi(this._phi);
+			this.PCamera.UpdateTheta(this._theta);
 		}
 	}
 }

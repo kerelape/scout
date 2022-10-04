@@ -49,4 +49,3 @@ namespace Game.Scout.Gameplay.Player
 		}
 	}
 }
-

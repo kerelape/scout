@@ -145,19 +145,19 @@
 			"ParentID": "d00d06e644e8220d377e8dba6444b865",
 			"V": {
 	"PCamera": "b08def3e4e98293a0ebbe2a8102654e7",
-	"PZoom": "6d05250b40114fa041e2c0952fb9e6b8",
+	"PZoom": "81e66dbf41b81e0b1be87ca1fcc70f2c",
 	"PLook": "830a5bcf4c7bfda7fee5c597e16d8241"
 }
 		},
 		{
-			"ID": "6d05250b40114fa041e2c0952fb9e6b8",
-			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerInputZoom",
+			"ID": "830a5bcf4c7bfda7fee5c597e16d8241",
+			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerLookInput",
 			"ParentID": "d00d06e644e8220d377e8dba6444b865",
 			"V": {}
 		},
 		{
-			"ID": "830a5bcf4c7bfda7fee5c597e16d8241",
-			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerLookInput",
+			"ID": "81e66dbf41b81e0b1be87ca1fcc70f2c",
+			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerZoomInput",
 			"ParentID": "d00d06e644e8220d377e8dba6444b865",
 			"V": {}
 		}
