@@ -1,3 +1,4 @@
+using System.Net;
 using System;
 using FlaxEngine;
 using Game.Scout.Gameplay.Player.Camera;
@@ -20,6 +21,10 @@ namespace Game.Scout.Gameplay.Player
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Zoom")]
 		private PlayerCameraZoom PZoom { get; set; }
+
+		[Serialize] [ShowInEditor]
+		[EditorDisplay(name: "Combat Mode Slide")]
+		private Single PCombatSlide { get; set; }
 
 		/// <summary>
 		/// Zoom the camera in.
@@ -46,6 +51,22 @@ namespace Game.Scout.Gameplay.Player
 		{
 			this.PRotation.RotateHorizontally(phiDelta);
 			this.PRotation.RotateVertically(thetaDelta);
+		}
+
+		/// <summary>
+		/// Enter combat mode.
+		/// </summary>
+		public void EnterCombatMode()
+		{
+			this.PSlide.Update(this.PCombatSlide);
+		}
+
+		/// <summary>
+		/// Exit combat mode.
+		/// </summary>
+		public void ExitCombatMode()
+		{
+			this.PSlide.Update(0);
 		}
 	}
 }
