@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using FlaxEngine;
 using Game.Scout.Gameplay.Player.Input;
 
@@ -15,7 +14,7 @@ namespace Game.Scout.Gameplay.Player
 
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Zoom Input")]
-		private PlayerInputZoom PZoom { get; set; }
+		private PlayerZoomInput PZoom { get; set; }
 
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Look Input")]

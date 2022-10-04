@@ -4,9 +4,9 @@ using FlaxEngine;
 namespace Game.Scout.Gameplay.Player.Input
 {
 	/// <summary>
-	/// PlayerInput Zoom.
+	/// Player zoom input.
 	/// </summary>
-	internal sealed class PlayerInputZoom : Script
+	internal sealed class PlayerZoomInput : Script
 	{
 		/// <summary>
 		/// Invoked when the player zooms in.
