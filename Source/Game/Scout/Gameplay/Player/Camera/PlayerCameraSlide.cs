@@ -7,7 +7,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 	/// <summary>
 	/// Player camera slide.
 	/// </summary>
-	public sealed class PlayerCameraSlide : Script
+	internal sealed class PlayerCameraSlide : Script
 	{
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Camera")]

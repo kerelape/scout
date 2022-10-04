@@ -6,7 +6,7 @@ namespace Game.Scout.Gameplay.Player
 	/// <summary>
 	/// PlayerInput.
 	/// </summary>
-	public sealed class PlayerInput : Script
+	internal sealed class PlayerInput : Script
 	{
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Player Camera")]

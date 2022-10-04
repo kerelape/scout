@@ -6,7 +6,7 @@ namespace Game.Scout.Gameplay.Player.Input
 	/// <summary>
 	/// PlayerInput Zoom.
 	/// </summary>
-	public sealed class PlayerInputZoom : Script
+	internal sealed class PlayerInputZoom : Script
 	{
 		/// <summary>
 		/// Invoked when the player zooms in.

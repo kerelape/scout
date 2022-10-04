@@ -7,7 +7,7 @@ namespace Game.Scout.Gameplay.Player.Camera
 	/// <summary>
 	/// Camera rotation component.
 	/// </summary>
-	public sealed class PlayerCameraRotation : Script
+	internal sealed class PlayerCameraRotation : Script
 	{
 		[Serialize] [ShowInEditor]
 		[EditorDisplay(name: "Camera")]

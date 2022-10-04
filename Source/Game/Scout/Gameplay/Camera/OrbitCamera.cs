@@ -16,7 +16,7 @@ namespace Game.Scout.Gameplay.Camera
     ///
     /// Only works in world space.
     /// </summary>
-    public sealed class OrbitCamera : Script
+    internal sealed class OrbitCamera : Script
     {
         [Serialize] [ShowInEditor]
         [Tooltip("Physical size of the camera.")]
