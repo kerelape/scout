@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using FlaxEngine;
 using Game.Scout.Gameplay.Player.Input;
 
@@ -16,11 +17,16 @@ namespace Game.Scout.Gameplay.Player
 		[EditorDisplay(name: "Zoom Input")]
 		private PlayerInputZoom PZoom { get; set; }
 
+		[Serialize] [ShowInEditor]
+		[EditorDisplay(name: "Look Input")]
+		private PlayerLookInput PLook { get; set; }
+
 		/// <inheritdoc />
 		public override void OnEnable()
 		{
 			this.PZoom.ZoomIn += this.ZoomCameraIn;
 			this.PZoom.ZoomOut += this.ZoomCameraOut;
+			this.PLook.Look += this.RotateCamera;
 		}
 
 		/// <inheritdoc />
@@ -28,6 +34,7 @@ namespace Game.Scout.Gameplay.Player
 		{
 			this.PZoom.ZoomIn -= this.ZoomCameraIn;
 			this.PZoom.ZoomOut -= this.ZoomCameraOut;
+			this.PLook.Look -= this.RotateCamera;
 		}
 
 		/// <summary>
@@ -44,6 +51,15 @@ namespace Game.Scout.Gameplay.Player
 		private void ZoomCameraOut()
 		{
 			this.PCamera.ZoomOut();
+		}
+
+		/// <summary>
+		/// Rotate player camera.
+		/// </summary>
+		/// <param name="delta">Rotation delta.</param>
+		private void RotateCamera(Float2 delta)
+		{
+			this.PCamera.Rotate(delta.X, delta.Y);
 		}
 	}
 }

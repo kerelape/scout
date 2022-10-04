@@ -132,6 +132,34 @@
 			"PrefabObjectID": "b24d607942e29306e4fb6fbdf3c1bf77",
 			"ParentID": "42f74483408d13126e331ebca61c9257",
 			"V": {}
+		},
+		{
+			"ID": "d00d06e644e8220d377e8dba6444b865",
+			"TypeName": "FlaxEngine.EmptyActor",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
+			"Name": "Player Input"
+		},
+		{
+			"ID": "0c619734408d73aae062eab7cd6d9802",
+			"TypeName": "Game.Scout.Gameplay.Player.PlayerInput",
+			"ParentID": "d00d06e644e8220d377e8dba6444b865",
+			"V": {
+	"PCamera": "b08def3e4e98293a0ebbe2a8102654e7",
+	"PZoom": "6d05250b40114fa041e2c0952fb9e6b8",
+	"PLook": "830a5bcf4c7bfda7fee5c597e16d8241"
+}
+		},
+		{
+			"ID": "6d05250b40114fa041e2c0952fb9e6b8",
+			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerInputZoom",
+			"ParentID": "d00d06e644e8220d377e8dba6444b865",
+			"V": {}
+		},
+		{
+			"ID": "830a5bcf4c7bfda7fee5c597e16d8241",
+			"TypeName": "Game.Scout.Gameplay.Player.Input.PlayerLookInput",
+			"ParentID": "d00d06e644e8220d377e8dba6444b865",
+			"V": {}
 		}
 	]
 }
