@@ -84,51 +84,54 @@
 		},
 		{
 			"ID": "42f74483408d13126e331ebca61c9257",
-			"TypeName": "FlaxEngine.Camera",
-			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",
-			"Name": "Camera",
-			"Transform": {
-				"Translation": {
-					"X": 0.0,
-					"Y": 135.0,
-					"Z": -299.0
-				}
-			}
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "f3d7041d45a67ac5ac7009a3be080a9d",
+			"ParentID": "6768dd934ddca30fc945ea9e49f8f664"
 		},
 		{
-			"ID": "e9f327414daed06ac7c7bda64f160c69",
-			"TypeName": "Game.Scout.Gameplay.Camera.CameraRotation",
+			"ID": "b08def3e4e98293a0ebbe2a8102654e7",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "9fca5b974cf3c55bc211f4ae590a31a5",
 			"ParentID": "42f74483408d13126e331ebca61c9257",
 			"V": {
-	"PCamera": "3048e5f24aacefcc7bec0289b3ca13ac",
-	"PLimit": 80.0
+	"PSlide": "fc8312e842d47353506a4f879c46a056",
+	"PRotation": "0ec36ee04258632b088d24919c25e470",
+	"PZoom": "0e49d68c48ba7d71df90e68d4b8d76ba"
 }
 		},
 		{
 			"ID": "0e49d68c48ba7d71df90e68d4b8d76ba",
-			"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraZoom",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "35dab538407cc0a29902d2aa00621ab1",
 			"ParentID": "42f74483408d13126e331ebca61c9257",
 			"V": {
-	"POffset": "daaf03094c48304695d7cca93c361798",
-	"PStep": 0.1,
-	"PMinOffset": 100.0,
-	"PMaxOffset": 1000.0
+	"POrbitCamera": "23572c294bcb5ed10c3c75825346da78"
 }
 		},
 		{
-			"ID": "3048e5f24aacefcc7bec0289b3ca13ac",
-			"TypeName": "Game.Scout.Gameplay.Camera.Orbit.OrbitCamera",
+			"ID": "0ec36ee04258632b088d24919c25e470",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "a828f6754632ce77389edc82a7489a1f",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"PCamera": "23572c294bcb5ed10c3c75825346da78"
+}
+		},
+		{
+			"ID": "fc8312e842d47353506a4f879c46a056",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "5c89fade408ca7460ef2c2a74053ab2a",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"POrbitCamera": "23572c294bcb5ed10c3c75825346da78"
+}
+		},
+		{
+			"ID": "23572c294bcb5ed10c3c75825346da78",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "b24d607942e29306e4fb6fbdf3c1bf77",
 			"ParentID": "42f74483408d13126e331ebca61c9257",
 			"V": {}
-		},
-		{
-			"ID": "daaf03094c48304695d7cca93c361798",
-			"TypeName": "Game.Scout.Gameplay.Camera.Orbit.AnimatedOrbitCameraOffset",
-			"ParentID": "42f74483408d13126e331ebca61c9257",
-			"V": {
-	"POrbitCamera": "3048e5f24aacefcc7bec0289b3ca13ac",
-	"PTime": 200.0
-}
 		}
 	]
 }
