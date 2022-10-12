@@ -18,9 +18,10 @@ namespace Game.Scout.Gameplay.Camera
     /// </summary>
     internal sealed class OrbitCamera : Script
     {
-        [Serialize] [ShowInEditor]
+        [Serialize]
+        [ShowInEditor]
         [Tooltip("Physical size of the camera.")]
-        private Single Radius { get; set; } = 32;
+        private Single PRadius { get; set; } = 32;
 
         /// <summary>
         /// Rotation phi in degrees.
@@ -129,14 +130,15 @@ namespace Game.Scout.Gameplay.Camera
             var clipped = Physics.RayCast(
                 origin: rig,
                 direction: (position - rig).Normalized,
-                maxDistance: (Single) this._offset,
+                maxDistance: (Single)this._offset,
                 hitTriggers: false,
                 hitInfo: out var hit
             );
             if (clipped)
             {
-                position = hit.Point + (rig - hit.Point).Normalized * this.Radius;
+                position = hit.Point + (rig - hit.Point).Normalized * this.PRadius;
             }
+
             this.Actor.Position = position;
             this.Actor.Orientation = Quaternion.LookRotation((rig - position).Normalized);
         }
