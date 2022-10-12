@@ -134,6 +134,15 @@
 			"V": {}
 		},
 		{
+			"ID": "f2e547fb4f610729afb926bb91a09d9f",
+			"PrefabID": "2040917b456b32e99efde9adb20eaaab",
+			"PrefabObjectID": "b52c00cd494a168a5831f38611659a0a",
+			"ParentID": "42f74483408d13126e331ebca61c9257",
+			"V": {
+	"PCamera": "23572c294bcb5ed10c3c75825346da78"
+}
+		},
+		{
 			"ID": "d00d06e644e8220d377e8dba6444b865",
 			"TypeName": "FlaxEngine.EmptyActor",
 			"ParentID": "6768dd934ddca30fc945ea9e49f8f664",

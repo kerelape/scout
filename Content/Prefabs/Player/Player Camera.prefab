@@ -6,7 +6,6 @@
 	{
 		"ID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"TypeName": "FlaxEngine.Camera",
-		"ParentID": "00000000000000000000000000000000",
 		"Name": "Player Camera",
 		"StaticFlags": 0
 	},
@@ -15,46 +14,55 @@
 		"TypeName": "Game.Scout.Gameplay.Player.PlayerCamera",
 		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"V": {
-			"PSlide": "5c89fade408ca7460ef2c2a74053ab2a",
-			"PRotation": "a828f6754632ce77389edc82a7489a1f",
-			"PZoom": "35dab538407cc0a29902d2aa00621ab1"
-		}
+	"PSlide": "5c89fade408ca7460ef2c2a74053ab2a",
+	"PRotation": "a828f6754632ce77389edc82a7489a1f",
+	"PZoom": "35dab538407cc0a29902d2aa00621ab1"
+}
 	},
 	{
 		"ID": "35dab538407cc0a29902d2aa00621ab1",
 		"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraZoom",
 		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"V": {
-			"POrbitCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
-			"PTime": 200.0,
-			"PStep": 0.1,
-			"PMinOffset": 200.0,
-			"PMaxOffset": 1000.0
-		}
+	"POrbitCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
+	"PTime": 200.0,
+	"PStep": 0.1,
+	"PMinOffset": 200.0,
+	"PMaxOffset": 1000.0
+}
 	},
 	{
 		"ID": "a828f6754632ce77389edc82a7489a1f",
 		"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraRotation",
 		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"V": {
-			"PCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
-			"PLimit": 80.0
-		}
+	"PCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
+	"PLimit": 80.0
+}
 	},
 	{
 		"ID": "5c89fade408ca7460ef2c2a74053ab2a",
 		"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraSlide",
 		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"V": {
-			"POrbitCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
-			"PTime": 200.0
-		}
+	"POrbitCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
+	"PTime": 200.0
+}
 	},
 	{
 		"ID": "b24d607942e29306e4fb6fbdf3c1bf77",
 		"TypeName": "Game.Scout.Gameplay.Camera.OrbitCamera",
 		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
 		"V": {}
+	},
+	{
+		"ID": "b52c00cd494a168a5831f38611659a0a",
+		"TypeName": "Game.Scout.Gameplay.Player.Camera.PlayerCameraMovement",
+		"ParentID": "f3d7041d45a67ac5ac7009a3be080a9d",
+		"V": {
+	"PCamera": "b24d607942e29306e4fb6fbdf3c1bf77",
+	"PSpeed": 16.0
+}
 	}
 ]
 }

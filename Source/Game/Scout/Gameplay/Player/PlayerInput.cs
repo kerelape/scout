@@ -6,6 +6,7 @@ namespace Game.Scout.Gameplay.Player
     /// <summary>
     /// PlayerInput.
     /// </summary>
+    [Category("Player/Input")]
     internal sealed class PlayerInput : Script
     {
         [Serialize]

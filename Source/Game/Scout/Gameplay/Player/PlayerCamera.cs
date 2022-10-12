@@ -7,6 +7,7 @@ namespace Game.Scout.Gameplay.Player
     /// <summary>
     /// Player camera.
     /// </summary>
+    [Category("Player/Camera")]
     internal sealed class PlayerCamera : Script
     {
         [Serialize]

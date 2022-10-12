@@ -6,6 +6,7 @@ namespace Game.Scout.Gameplay.Player.Input
     /// <summary>
     /// Player zoom input.
     /// </summary>
+    [Category("Player/Input")]
     internal sealed class PlayerZoomInput : Script
     {
         /// <summary>

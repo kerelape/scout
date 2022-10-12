@@ -6,6 +6,7 @@ namespace Game.Scout.Gameplay.Player.Input
     /// <summary>
     /// Player look input.
     /// </summary>
+    [Category("Player/Input")]
     internal sealed class PlayerLookInput : Script
     {
         /// <summary>
