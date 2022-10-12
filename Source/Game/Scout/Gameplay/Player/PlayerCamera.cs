@@ -1,4 +1,3 @@
-using System.Net;
 using System;
 using FlaxEngine;
 using Game.Scout.Gameplay.Player.Camera;
