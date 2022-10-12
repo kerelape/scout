@@ -31,14 +31,20 @@ namespace Game.Scout.Gameplay.Player.Camera
         /// </summary>
         [Serialize] private Single _theta;
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Rotate the camera horizontally.
+        /// </summary>
+        /// <param name="delta">Rotation delta in degrees.</param>
         public void RotateHorizontally(Single delta)
         {
             this._phi += delta;
             this.PCamera.UpdatePhi(this._phi);
         }
 
-        /// <inheritdoc />
+        /// <summary>
+        /// Rotate the camera vertically.
+        /// </summary>
+        /// <param name="delta">Rotation delta in degrees.</param>
         public void RotateVertically(Single delta)
         {
             delta *= (this.PLimit * 2f) / 360f;
